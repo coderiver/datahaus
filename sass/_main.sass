@@ -1,216 +1,688 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// HEADER
+.header__in
+	@extend %in
+	+clr
+
+.header__top
+	width: 100%
+	height: 33px
+	border-bottom: 1px solid #000
+	background-color: #000
+	+box-shadow(0 2px 9px rgba(0,0,0,.19))
+	+g(#292929, #1b1b1b)
+	.header__offer
+		color: #838383
+		line-height: 33px
+		+fs(11)
+		+mpr
+	.fa.fa-long-arrow-right
+		padding: 0 6px 0 9px
+		color: #1991d5
+		vertical-align: middle
+		+fs(16)
+	.header__blue
+		color: #1991d5
+	.header__price
+		color: #FFF
+	.header__bl
+		position: relative
+		height: 33px
+		line-height: 33px
+		&.onright
+			border-left: 1px solid #181818
+			border-right: 1px solid #333232
+		&.language
+			width: 155px
+			background-color: #000
+			+g(#1b1a1a, #2a2a2a)
+			border-right: 1px solid #181818
+		&.reg
+			border-left: 1px solid #333232
+			border-right: 1px solid #181818
+			.header__offer
+				padding: 0 23px 0 18px
+		.login
+			border-left: 1px solid #333232
+			border-right: 1px solid #181818
+			line-height: 34px
+			+mpsb
+	.header__lang, .select
+		display: inline-block
+		vertical-align: top
+	.header__lang
+		padding: 0 11px 0 18px
+		color: #6B6B6B
+		border-left: 1px solid #333232
+		+fs(11)
+	.header__login
+		display: block
+		padding: 0 20px
+		text-transform: uppercase
+		color: #AAA
+		+fs(10)
+
+.header__middle
+	min-height: 527px
+	background: url(../img/head_bg.png) 50% 0 no-repeat
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	background-color: #0f0e16
+	&.inside
+		min-height: 156px
+	.header__bl
+		&.withpad
+			padding-top: 12px
+	.header__in-top
+		padding-top: 60px
+		+clr
+		&.inside
+			padding-top: 50px
+		.logo__in
+			display: block
+			font-size: 0
+		.logo__sym
+			display: inline-block
+			vertical-align: middle
+			padding-right: 15px
+			+s(logo)
+		.logo__txt
+			position: relative
+			vertical-align: middle
+			margin-right: 15px
+			color: #FFF
+			+mpsb
+			+fs(40)
+			&:after
+				content: "\2013"
+				position: absolute
+				top: -23px
+				right: 41px
+				+fs(38)
+		.logo__sup
+			display: inline-block
+			text-transform: uppercase
+			color: #AAA
+			line-height: 10px
+			+mpsb
+			+fs(10)
+			span
+				display: block
+		.phone__num, .phone
+			display: inline-block
+		.phone__num
+			vertical-align: baseline
+			+s(phone)
+		.phone
+			padding-left: 20px
+			text-align: right
+			color: #FFF
+			line-height: 1.1
+			+fs(20)
+			+mpr
+		.phone__link
+			display: block
+			color: #1991D5
+			+fs(12)
+			+mpr
+			&:hover
+				text-decoration: underline
+		.or
+			display: block
+			padding: 8px 20px 0
+			color: #aaa
+			+fs(13)
+			+mpi
+		.chat
+			margin-top: 2px
+	.header__in-bottom
+		padding-top: 100px
+		+clr
+		.dedicated
+			margin-bottom: 25px
+			+s(dedicated)
+		.dedicated__txt
+			color: #aaa
+			+fs(12)
+			+mpi
+		.config__price
+			text-align: center
+			overflow: hidden
+			line-height: 1.2
+			+s(frame)
+		.config__p
+			position: relative
+			padding-top: 14px
+			color: #fff
+			+fs(42)
+			+mpsb
+			&:before
+				content: "$"
+				position: absolute
+				left: 34px
+				+fs(30)
+		.config__another
+			text-transform: uppercase
+			color: #fff
+			+fs(17)
+			+mpr
+		.config__span
+			display: inline-block
+			vertical-align: top
+			+fs(30)
+			+mpb
+		.config__b
+			margin-top: 14px
+		.nav
+			margin-left: 50px
+			text-align: right
+			a
+				position: relative
+				display: inline-block
+				margin-bottom: 36px
+				padding-right: 60px
+				text-transform: uppercase
+				color: #fff
+				line-height: 1
+				+fs(13)
+				+mpsb
+				+opacity(.3)
+				+transition(opacity 0.3s ease)
+				&:hover
+					+opacity(1)
+					&:before
+						display: block
+				&:before
+					content: ""
+					display: none
+					position: absolute
+					top: 3px
+					left: -13px
+					+s(nav-h)
+				&:after
+					content: ""
+					position: absolute
+					+opacity(0.5)
+			.hosting
+				display: inline-block
+				&:after
+					top: -27px
+					right: -5px
+					+s(hosting)
+				&:hover
+					&:after
+						top: -42px
+						right: -29px
+						+opacity(1)
+						+s(hosting-h)
+			.vps
+				&:after
+					top: -18px
+					right: -6px
+					+s(vps)
+				&:hover
+					&:after
+						top: -39px
+						right: -24px
+						+opacity(1)
+						+s(vps-h)
+			.servers
+				&:after
+					top: -14px
+					right: -7px
+					+s(server)
+			.domains
+				&:after
+					top: -18px
+					right: -9px
+					+s(domain)
+
+.header__bottom
+	height: 61px
+	background-color: #000
+	+box-shadow(0 2px 9px rgba(0,0,0,.19))
+	+g(#292929, #1b1b1b)
+	+clr
+	.menu
+		+box
+		+clr
+		li
+			position: relative
+			float: left
+			border-left: 1px solid #181818
+			border-right: 1px solid #333232
+			+box
+			&:first-child
+				a
+					border-left: 1px solid #333232
+			&:last-child
+				a
+					border-right: 1px solid #181818
+		a
+			display: block
+			position: relative
+			padding: 0 27px
+			text-transform: uppercase
+			color: #fff
+			line-height: 61px
+			+fs(17)
+			+mpsb
+			+text-shadow(-1px -1px 0 rgba(0,0,0,.41))
+			&:hover
+				background: url(../img/icons/menu-h.png) repeat-x
+				&:before
+					content: ""
+					position: absolute
+					display: block
+					width: 100%
+					height: 3px
+					top: 0
+					left: 0
+					background-color: #23b5eb
+					+g(#23b5eb, #0961b5)
+	.search
+		float: right
+		position: relative
+		margin-top: 18px
+		&:after
+			content: ""
+			position: absolute
+			top: 4px
+			right: 7px
+			+s(zoom)
+	.search__txt
+		display: inline-block
+		margin-right: 14px
+		text-transform: uppercase
+		color: #575757
+		line-height: 61px
+		+fs(12)
+		+mpr
+		+text-shadow(-1px -1px 0 rgba(0,0,0,.52))
+
+//main
+.main
+	background-color: #fff
+	+box-shadow(inset 0 79px 15px -10px rgba(248, 248, 249, 0.35))
+.main__in
+	@extend %in
+	text-align: center
+	margin-bottom: 40px
+	.main__ttl
+		padding-top: 40px
+		color: #212121
+		+fs(40)
+		+hl
+	.down
+		margin-top: 4px
+	.products
+		min-height: 515px
+		margin-top: 30px
+	.products__in
+		+clr
+		border-left: 1px solid #e5e5e5
+		border-right: 1px solid #e5e5e5
+.products__item
+	position: relative
+	width: 25%
+	height: 490px
+	padding: 22px 18px
+	border-top: 1px solid #e5e5e5
+	border-bottom: 1px solid #e5e5e5
+	overflow: hidden
+	cursor: pointer
+	+box-shadow(0 2px 8px rgba(0,0,0,.08))
+	+box
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 1px
+		height: 490px
+		top: 0
+		right: 0
+		background-color: #e5e5e5
+	&.last
+		&:after
+			display: none
+	&:hover
+		position: relative
+		height: 515px
+		margin-top: -14px
+		border: 4px solid #1991d5
+		background-color: #eaf0f4
+		padding: 33px 14px 19px 14px
+		+border-radius(5px)
+		+box-shadow(0 10px 20px rgba(0,0,0,.4))
+		+box
+	.products__ttl
+		min-height: 32px
+		+clr
+		.name
+			width: 50%
+			text-align: left
+			text-transform: uppercase
+			color: #222222
+			line-height: 16px
+			+mpsb
+			+fs(18)
+		.permonth
+			position: relative
+			min-width: 62px
+			height: 30px
+			padding-top: 1px
+			text-align: center
+			color: #fff
+			background-color: #99d519
+			+border-radius(3px)
+			+g(#97cf00, #7fb300)
+			+box
+			+mpr
+			&:after
+				content: ""
+				position: absolute
+				bottom: -9px
+				left: 12px
+				+arr(13, 10, #7fb300, tl)
+		.permonth__num
+			display: inline-block
+			+fs(22)
+		.permonth__txt
+			display: inline-block
+			width: 30%
+			margin-left: 5px
+			text-align: left
+			line-height: 1
+			+fs(9)
+	.products__img
+		width: 100%
+		height: 176px
+		display: inline-block
+		vertical-align: middle
+		+vertical
+	.prod
+		display: inline-block
+		vertical-align: middle
+	.product1
+		+s(hosting_big)
+	.product2
+		margin-top: 20px
+		+s(vps_big)
+	.product3
+		margin-top: 15px
+		+s(server_big)
+	.product4
+		+s(domain_big)
+	.product5
+		margin-top: 25px
+		+s(website)
+	.products__desc
+		+clr
+	.products__txt
+		height: 45px
+	.products__p
+		text-align: left
+		color: #939393
+		+fs(11)
+		+mpr
+		&.another
+			+fs(13)
+			color: #000
+	.free
+		color: #7BAE00
+		+fs(14)
+		+li
+	.products__char
+		margin: 20px 0
+		border-collapse: collapse
+		&.another
+			tr
+				&:first-child
+					td
+						+border-radius(0 0 0 3px)
+					.second
+						+border-radius(3px 0 0 0)
+				&:last-child
+					td
+						+border-radius(0 0 0 3px)
+					.second
+						+border-radius(0 0 3px 0)
+		tr
+			&:nth-child(odd)
+				background-color: #f0f5f7
+			&:nth-child(even)
+				background-color: #f7fafb
+			&:first-child
+				td
+					+border-radius(3px 3px 0 0)
+			&:last-child
+				td
+					+border-radius(0 0 3px 3px)
+		td
+			padding: 5px 15px 5px
+			text-align: left
+			border-bottom: 1px solid #fff
+			span
+				color: #a4a5a6
+				+fs(13)
+				+mpr
+		.second
+			width: 70%
+			padding: 5px 12px 5px 0
+			text-align: right
+			color: #888B8C
+			background-color: #E9EEF0
+			border-left: 1px solid #fff
+			&:first-child
+				+border-radius(0 3px 0 0)
+			&.another
+				background-color: #f0f3f4
+		.checked
+			position: relative
+			padding-left: 30px
+			&:before
+				content: ""
+				position: absolute
+				top: 3.5px
+				left: 0
+				+s(checked)
+	.slider
+		margin-top: 10px
+
+.reliable
+	position: relative
+	min-height: 492px
+	border-top: 1px solid #e8e8e8
+	background: url(../img/map.png) 50% 30% no-repeat
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	+box-shadow(inset 0 70px 15px -10px rgba(248, 248, 249, 0.35))
+	&:before
+		content: ""
+		position: absolute
+		top: -11.5px
+		left: 50%
+		margin-left: -11.5px
+		+s(down)
+
+.reliable__in
+	@extend %in
+	text-align: center
+	.reliable__ttl
+		padding-top: 30px
+		+fs(60)
+		+mpsb
+	.reliable__subttl
+		color: #838383
+		line-height: 1
+		+fs(28)
+		+hl
+	.reliable__features
+		margin: 35px 0 30px 0
+		text-align: justify
+		&:after
+			content: ""
+			display: inline-block
+			width: 100%
+	.features__item
+		display: inline-block
+		width: 31%
+		text-align: center
+	.reliable__arr
+		display: block
+		margin: 0 auto
+		margin-bottom: 30px
+		+s(reliable)
+	.features__ttl
+		margin-bottom: 30px
+		color: #000
+		+fs(20)
+		+mpr
+	.features__txt
+		color: #939393
+		+fs(13)
+		+mpr
+	.features__link
+		color: #1992D5
+		&:hover
+			text-decoration: underline
+	.moreabout
+		margin: 0 auto
+		color: #939393
+		+fs(11)
+		+mpi
+		a
+			display: block
+			width: 30px
+			height: 30px
+			margin: 0 auto 13px
+			color: #fff
+			background-color: #ffb300
+			+mpsb
+			+fs(20)
+			+border-radius(15px)
+			+box-shadow(0 2px 3px rgba(0,0,0,.14))
+			+text-shadow(-1px -1px 0 #cf8600)
+			+g(#ffb300, #ff9100)
+
+
+//footer
+.specialist
+	height: 60px
+	background-color: #f5f7f9
+	+box-shadow(0 2px 3px rgba(0,0,0,.14))
+	+g(#f5f7f9, #dae2e6)
+
+.specialist__in
+	@extend %in
+	.specialist__p
+		text-transform: uppercase
+		color: #222
+		line-height: 60px
+		+fs(13)
+		+mpsb
+	.ask
+		display: inline-block
+		margin-right: 18px
+		vertical-align: middle
+		+mpsb
+		+s(ask)
+	.fa.fa-long-arrow-right
+		padding: 0 19px 0 16px
+		color: #ff9300
+		+fs(15)
+	.specialist__grey
+		color: #939393
+		text-transform: none
+		+fs(12)
+		+mpi
+	.chat
+		margin-top: 15px
+
+.footer__nav
+	height: 200px
+	background: url("../img/footer_nav.png") repeat-x
+	border-top: 4px solid #595959
+
+.footer__nav-in
+	@extend %in
+	+clr
+	.footer__nav-item
+		padding-top: 28px
+		width: 164px
+		p
+			padding-bottom: 25px
+			text-transform: uppercase
+			color: #FFF
+			+fs(16)
+			+mpsb
+		ul
+			li
+				line-height: 20px
+				a
+					color: #8F8F8F
+					+fs(12)
+					+mpr
+					&:hover
+						color: #fff
+
+.copyright
+	height: 60px
+	background-color: #212121
+	border-top: 1px solid #323232
+	+box-shadow(0 2px 9px rgba(0,0,0,.19))
+	+g(#272727, #222222)
+
+.copyright__in
+	@extend %in
+	line-height: 60px
+	+clr
+	.copyright__txt
+		color: #818181
+		+fs(12)
+		+mpr
+		span
+			color: #FFF
+	.sitemap
+		margin-left: 105px
+		li
+			border-right: 1px solid #181818
+			border-left: 1px solid #323232
+			&:first-child
+				border-left: 0
+			&:last-child
+				border-right: 0
+			a
+				display: block
+				padding: 0 24px
+				color: #5085A0
+				+fs(12)
+				+mpr
+	.social
+		p
+			display: inline-block
+			width: 63px
+			margin-right: 28px
+			color: #818181
+			vertical-align: middle
+			line-height: 1
+			+fs(10)
+			+mpi
+		ul
+			display: inline-block
+			vertical-align: middle
+			+clr
+			a
+				display: block
+				padding-right: 5px
+			.twitter
+				+s(twitter)
+			.fb
+				+s(fb)
+			.rss
+				padding-right: 0
+				+s(rss)
 
 
 

@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
+// 	font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -47,15 +47,65 @@
 // p
 // 	+jpg(bla)
 
+html, body
+	font-size: 62.5%
+	height: 100%
+	+font-smoothing
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-family: Myriad Pro, Arial, sans-serif
 	line-height: 1.4
+	position: relative
 
+.out
+	margin: 0 auto
+	min-width: 984px
+	min-height: 100%
+	margin-bottom: -325px
+	&:after
+		content: ""
+		display: block
+		height: 325px
 
-// common blocks      
+%in
+	width: 984px
+	margin: 0 auto
 
+.onleft
+	float: left
+.onright
+	float: right
+
+.eq-ie8
+	.search__input
+		padding-top: 5px
+
+a
+	text-decoration: none
+
+// fonts
++font(MyriadPro-Regular, MyriadPro-Regular)
++font(MyriadPro-Semibold, MyriadPro-Semibold)
++font(MyriadPro-Bold, MyriadPro-Bold)
++font(MyriadPro-It, MyriadPro-It)
++font(HelveticaNeue-Light, HelveticaNeue-Light)
++font(Lucida_It, Lucida_It)
++font(FontAwesome, fontawesome-webfont)
+
+=mpr
+	font-family: "MyriadPro-Regular", Myriad Pro, Arial, sans-serif
+=mpb
+	font-family: "MyriadPro-Bold", Myriad Pro, Arial, sans-serif
+=mpsb
+	font-family: "MyriadPro-Semibold", Myriad Pro, Arial, sans-serif
+=mpi
+	font-family: "MyriadPro-It", Myriad Pro, Arial, sans-serif
+=hl
+	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif
+=li
+	font-family: "Lucida_It", Helvetica, Arial, sans-serif
+=fa
+	font-family: "FontAwesome", Myriad Pro, Arial, sans-serif
 
 
 

@@ -1,8 +1,8 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(".slider").slider({
+		range: "min",
+		step: 6.730752
+	});
 
-	console.log($('body').html());
 });

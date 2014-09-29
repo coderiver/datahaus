@@ -1,0 +1,142 @@
+//select
+.select
+	position: relative
+	width: 74px
+	.country
+		display: none
+	a
+		display: block
+		padding-left: 25px
+		color: #fff
+		letter-spacing: -0.9px
+		text-transform: uppercase
+		+fs(10)
+		&:before
+			content: ""
+			position: absolute
+			top: 11px
+			left: 0px
+	&:after
+		content: ""
+		position: absolute
+		top: 15px
+		right: 15px
+		+s(arr)
+	.eng
+		&:before
+			+s(eng)
+
+
+//buttons
+.chat
+	width: 144px
+	height: 30px
+	padding: 0 10px 0 14px
+	border: 1px solid #2790c0
+	background-color: #23b7eb
+	text-transform: uppercase
+	color: #FFF
+	letter-spacing: -0.2px
+	+mpsb
+	+text-shadow(-1px -1px 0 rgba(0,0,0,.24))
+	+fs(12)
+	+border-radius(5px)
+	+box-shadow(0 3px 5px rgba(0,0,0,.15))
+	+g(#23b7eb, #085db4)
+	.online
+		padding-left: 15px
+		text-shadow: none
+		text-transform: none
+		color: #CDF6FF
+		+opacity(0.7)
+		+fs(11)
+		+mpi
+	.online__i
+		display: inline-block
+		margin-left: 10px
+		vertical-align: -1.5px
+		+s(online)
+
+.config__b
+	display: block
+	width: 144px
+	height: 40px
+	background-color: #ff9100
+	color: #fff
+	line-height: 1
+	text-transform: uppercase
+	+fs(12)
+	+mpsb
+	+text-shadow(-1px -1px 0 rgba(0,0,0,.17))
+	+border-radius(5px)
+	+box-shadow(0 18px 16px rgba(0,0,0,.14))
+	+g(#ffb300, #ff9100)
+
+.viewmore
+	width: 100%
+	height: 35px
+	color: #FFF
+	background-color: #085db4
+	border: 1px solid #2790c0
+	text-transform: uppercase
+	+border-radius(3px)
+	+box-shadow(0 4px 5px rgba(0,0,0,.13))
+	+box
+	+fs(15)
+	+mpsb
+	+g(#23b7eb, #085db4)
+	+text-shadow(-1px -1px 0 rgba(0,0,0,.17))
+	&.another
+		width: 80%
+
+.settings
+	position: relative
+	width: 35px
+	height: 35px
+	background-color: #e7ebed
+	border: 1px solid #ccd2d6
+	+box
+	+border-radius(3px)
+	+box-shadow(0 4px 5px rgba(0,0,0,.09))
+	+g(#fff, #d0d8dd)
+	i
+		display: block
+		margin: 0 auto
+		+s(settings)
+
+.back
+	display: block
+	text-align: center
+	+s(back)
+	+vertical
+	span
+		display: inline-block
+		color: #B1BDC2
+		vertical-align: middle
+		+fs(10)
+		+mpi
+	i
+		padding-right: 13px
+		color: #B1BDC2
+		vertical-align: middle
+		line-height: 26px
+		+fs(15)
+
+//search
+.search__input
+	width: 215px
+	height: 23px
+	padding: 0 30px 0 10px
+	background-color: #151313
+	color: #FFF
+	background: url(../img/icons/search.png) repeat-x
+	+mpr
+	+border-radius(5px)
+	+box-shadow(0 1px 0 rgba(255,255,255,.1))
+
+
+//scroll arrow
+.down
+	display: inline-block
+	text-align: center
+	+s(down)
