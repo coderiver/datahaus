@@ -3,6 +3,8 @@
 .reasons
 	background-color: #fff
 	+box-shadow(inset 0 68px 15px -11px rgba(248, 248, 249, 0.35))
+	&.another
+		min-height: 1200px
 
 .reasons__in
 	@extend %in
@@ -10,7 +12,7 @@
 	+clr
 	.reasons__ttl
 		width: 732px
-		padding: 40px 0 47px 0
+		padding: 32px 0 32px 0
 		+box
 	.reasons__p
 		display: inline-block
@@ -49,7 +51,7 @@
 			padding: 10px 20px
 			text-transform: uppercase
 			color: #222
-			background-color: #c5dbe5
+			background-color: #f3f6f7
 			border: 1px solid #ccd2d6
 			+g(#f5f7f9, #e2e6e8)
 			+fs(13)
@@ -109,6 +111,7 @@
 		.spec
 			+s(specialist)
 	.choose__service
+		max-height: 500px
 		margin-top: 25px
 		border: 1px solid #e5e5e5
 		+box-shadow(0 2px 8px rgba(0,0,0,.08))
@@ -123,13 +126,6 @@
 			+mpr
 		.slider__controls
 			padding: 4px 20px 0 0
-			.cycle__prev
-				display: inline-block
-				padding-right: 8px
-				+s(prev)
-			.cycle__next
-				display: inline-block
-				+s(next)
 		.slider__bottom
 			.products__item
 				width: 100%
@@ -183,9 +179,20 @@
 		top: -17px
 		left: 0
 		+s(points)
+	&.another
+		&:before
+			display: none
+		&.another
+			.points__item
+				border-bottom: 0
+				padding: 0
+			.points__txt
+				padding-left: 0
+				margin-bottom: 20px
 	.points__item
 		padding: 15px 0 25px 0
 		border-bottom: 1px solid #e5e5e5
+		+clr
 		&:last-child
 			border-bottom: 0
 	.points__ttl
@@ -217,3 +224,62 @@
 			&:hover
 				text-decoration: underline
 
+
+//text2
+.dedicated__char
+	+clr
+	.dedicated__brace
+		+s(brace)
+	.char__txt
+		width: 47%
+		margin-top: 28px
+		padding-right: 20px
+		p
+			position: relative
+			padding-left: 34px
+			color: #AFAFAF
+			+fs(13)
+			+mpi
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				+s(checked_big)
+			&:first-child
+				margin-bottom: 35px
+
+.carousel
+	margin: 50px 0
+	.points__item
+		margin-bottom: 20px
+	.carousel__controls
+		margin: 8px 12px 0 0
+	.cycle-slideshow
+		max-height: 92px
+
+.advanced__char
+	text-align: justify
+	+clr
+	&:after
+		content: ""
+		width: 100%
+		display: inline-block
+	.advanced__brace
+		+s(brace)
+	.advanced__txt
+		display: inline-block
+		width: 31%
+		margin-top: 30px
+		text-align: left
+		vertical-align: top
+		p
+			position: relative
+			padding-left: 34px
+			color: #AFAFAF
+			+fs(13)
+			+mpi
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				+s(star)
