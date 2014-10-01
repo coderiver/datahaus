@@ -121,6 +121,36 @@
 		line-height: 26px
 		+fs(15)
 
+.butn
+	display: inline-block
+	width: 40px
+	height: 30px
+	border: 1px solid #ccd2d6
+	background-color: #d0d8dd
+	+g(#fff, #d0d8dd)
+	&.is-active
+		background-color: #eaebee
+		background-image: none
+		+box-shadow(inset 2px 2px 3px rgba(0,0,0,.12))
+	&.horz
+		+border-radius(0 5px 5px 0)
+		i
+			display: block
+			margin: 0 auto
+			+s(horz)
+		&.is-active
+			i
+				+s(horz-active)
+	&.vert
+		+border-radius(5px 0 0 5px)
+		i
+			display: block
+			margin: 0 auto
+			+s(vert)
+		&.is-active
+			i
+				+s(vert-active)
+
 //search
 .search__input
 	width: 215px
@@ -148,3 +178,17 @@
 .cycle__next, .carousel__next
 	display: inline-block
 	+s(next)
+
+//jScrollPane styles
+.features__table
+	overflow-y: scroll
+	.jspDrag
+		left: 50%
+		margin-left: -4px
+		+s(scroller)
+	.jspTrack
+		width: 3px
+		color: #eaebec
+	.jspVerticalBar
+		width: 5px
+		background: none
