@@ -2,29 +2,54 @@
 .select
 	position: relative
 	width: 74px
-	.country
-		display: none
 	a
 		display: block
-		padding-left: 25px
+		padding-left: 28px
 		color: #fff
 		letter-spacing: -0.9px
 		text-transform: uppercase
 		+fs(10)
+	.chosen
 		&:before
 			content: ""
 			position: absolute
-			top: 11px
-			left: 0px
+			top: 10px
+			left: 1px
 	&:after
 		content: ""
 		position: absolute
-		top: 15px
+		top: 14px
 		right: 15px
 		+s(arr)
+	.country
+		display: none
+		width: 73px
+		background: #000
+		border: 1px solid #000
+		+g(#292929, #1b1b1b)
+		&.is-visible
+			display: block
+		.link
+			position: relative
+			padding-left: 43px
+			line-height: 30px
+			color: #AAA
+			&:before
+				content: ""
+				position: absolute
+				top: 8px
+				left: 14px
+			&:hover
+				color: #fff
 	.eng
 		&:before
 			+s(eng)
+	.germany
+		&:before
+			+s(germany)
+	.canada
+		&:before
+			+s(canada)
 
 //buttons
 .chat
@@ -158,11 +183,75 @@
 	padding: 0 30px 0 10px
 	background-color: #151313
 	color: #FFF
-	background: url(../img/icons/search.png) repeat-x
+	background: url(../img/search.png) repeat-x
 	+mpr
 	+border-radius(5px)
 	+box-shadow(0 1px 0 rgba(255,255,255,.1))
+	&.another
+		width: 100%
+		height: 25px
+		padding: 0 75px 0 27px
+		color: #4A4C4D
+		background: url(../img/search2.png) repeat-x
+		border: 1px solid #d3d9dc
+		background-color: #fff
+		+box-shadow(inset 0 1px 3px rgba(0,0,0,.08))
+		+box
 
+//another search field
+.products__search
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 13px
+		left: 10px
+		+s(zoom2)
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		top: 8px
+		right: 0
+		width: 25px
+		height: 23px
+		border: 1px solid #d7dcdf
+		background-color: #e6e9eb
+		z-index: 1
+		+border-radius(0 5px 5px 0)
+		+g(#fff, #e6e9eb)
+
+.custom__select
+	position: absolute
+	width: 35%
+	height: 25px
+	top: 8px
+	right: 0
+	text-align: left
+	&:after
+		content: ""
+		position: absolute
+		top: 11px
+		right: 10px
+		z-index: 3
+		+s(arr_black)
+	select
+		position: absolute
+		width: 100%
+		height: 25px
+		right: 0
+		z-index: 5
+		cursor: pointer
+		+opacity(0)
+	span
+		display: inline-block
+		margin-top: 6px
+		padding: 1px 0 0 5px
+		color: #4a4c4d
+		border-left: 1px solid #e0e4e6
+		line-height: 1.2
+		+fs(11)
+		+box
 
 //scroll arrow
 .down
@@ -192,3 +281,180 @@
 	.jspVerticalBar
 		width: 5px
 		background: none
+
+//domain tabs
+.domain__tabs
+	margin-top: 30px
+	+fs(20)
+	ul
+		text-align: center
+		font-size: 0
+		padding-bottom: 8px
+		li
+			display: inline-block
+			a
+				position: relative
+				margin-right: 15px
+				padding: 10px 30px
+				text-transform: uppercase
+				color: #989898
+				background-color: #f7f9f9
+				border: 1px solid #e5e5e5
+				border-bottom-width: 0
+				+fs(13)
+				+mpsb
+				+text-shadow(1px 1px 0 #fff)
+				+g(#f8f9f9, #eeefef)
+				&:before
+					content: ""
+					position: absolute
+					width: 18px
+					height: 100%
+					top: -1px
+					left: -10px
+					background: #f7f9f9
+					border-top: 1px solid #e5e5e5
+					border-left: 1px solid #e5e5e5
+					+border-radius(3px 0 0 0)
+					+transform(skewX(-22deg))
+					+g(#f8f9f9, #eeefef)
+				&:after
+					content: ""
+					position: absolute
+					width: 18px
+					height: 100%
+					top: -1px
+					right: -10px
+					background: #f7f9f9
+					border-top: 1px solid #e5e5e5
+					border-right: 1px solid #e5e5e5
+					z-index: 2
+					+border-radius(0 3px 0 0)
+					+transform(skewX(22deg))
+					+g(#f8f9f9, #eeefef)
+			&.is-active
+				a
+					padding: 10px 30px 11px
+					background: #FFF
+					color: #222222
+					border-bottom-width: 0
+					&:before
+						content: ""
+						position: absolute
+						width: 18px
+						height: 100%
+						top: -1px
+						left: -10px
+						background: #fff
+						border-top: 1px solid #e5e5e5
+						border-left: 1px solid #e5e5e5
+						+border-radius(3px 0 0 0)
+						+transform(skewX(-22deg))
+						z-index: 2
+					&:after
+						content: ""
+						position: absolute
+						width: 18px
+						height: 100%
+						top: -1px
+						right: -10px
+						background: #fff
+						border-top: 1px solid #e5e5e5
+						border-right: 1px solid #e5e5e5
+						z-index: 2
+						+border-radius(0 3px 0 0)
+						+transform(skewX(22deg))
+
+.tabs__inside
+	height: 295px
+	padding: 20px 10px 30px 20px
+	border: 1px solid #e5e5e5
+	+box
+	.tabs__wrap
+		height: 245px
+	.tab
+		padding-right: 10px
+		+clr
+	.jspDrag
+		left: 50%
+		margin-left: -7.5px
+		+s(scroller2)
+	.jspTrack
+		width: 3px
+		color: #f2f2f2
+	.jspVerticalBar
+		width: 8px
+		right: 0
+		background: none
+	.tabs__txt
+		width: 450px
+		margin-right: 10px
+		&:first-child
+			margin-right: 0
+	.tabs__table
+		margin-bottom: 20px
+		font-family: Arial, sans-serif
+		color: #969696
+		+fs(12)
+		tr
+			&:nth-child(even)
+				background-color: #f4f6f7
+				color: #C0C2C3
+			td
+				padding: 10px
+		.checkbox__mode
+			padding-left: 30px
+			span
+				display: inline-block
+				padding-left: 10px
+				color: #1992D5
+				vertical-align: top
+				+fs(9)
+		.pricing
+			color: #000
+			width: 5%
+			text-align: right
+			+fs(12)
+		.pricing-simple
+			color: #737373
+
+//checkbox
+.checkbox
+	display: inline-block
+	position: relative
+	input
+		position: absolute
+		left: 0
+		top: 0
+		height: 15px
+		z-index: 2
+		+opacity(0)
+		&:checked
+			+ .checkbox__mode
+				&:after
+					display: block
+
+.checkbox__mode
+	display: block
+	position: relative
+	z-index: 1
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 13px
+		height: 13px
+		border: 1px solid #bbc1c5
+		background: #fff
+		+border-radius(2px)
+		+box-shadow(inset 1px 1px 7px rgba(0,0,0,.12))
+
+	&:after
+		content: ""
+		display: none
+		position: absolute
+		top: 6px
+		left: 5px
+		z-index: 2
+		+s(checkbox_checked)

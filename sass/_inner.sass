@@ -18,8 +18,7 @@
 		display: inline-block
 		margin-right: 25px
 		color: #212121
-		+fs(40)
-		+hl
+		+ttl
 	.reasons__why
 		display: inline-block
 		width: 40%
@@ -108,8 +107,6 @@
 				top: 18px
 				right: -5px
 				+fa
-		.spec
-			+s(specialist)
 	.choose__service
 		max-height: 500px
 		margin-top: 25px
@@ -145,6 +142,9 @@
 					border-right: 0
 				.products__img
 					height: 125px
+					img
+						&.website
+							margin-top: 25px
 	.webneed
 		position: relative
 		margin-top: 20px
@@ -326,8 +326,7 @@
 	.unlim__ttl
 		color: #222
 		line-height: 1
-		+fs(40)
-		+hl
+		+ttl
 	.unlim__view
 		margin-top: 5px
 		font-size: 0
@@ -384,8 +383,6 @@
 				+s(side)
 		span
 			display: block
-	.moebius__pic
-		+s(unlimited)
 	.unlim__features
 		position: relative
 		margin-left: 27px
@@ -446,6 +443,9 @@
 		margin-top: 50px
 		padding: 40px 120px 45px
 		border-top: 1px solid #E8E8E8
+		&.noborder
+			border: 0
+			padding: 0 120px 45px
 	.info
 		display: inline-block
 		width: 128px
@@ -502,11 +502,9 @@
 		width: 50%
 		margin: 0 auto 50px
 		padding-top: 44px
-		text-align: center
 		color: #BBB
 		line-height: 37px
-		+fs(40)
-		+hl
+		+ttl
 	.choice__bl
 		width: 50%
 		margin-bottom: 25px
@@ -592,28 +590,16 @@
 			+s(points)
 		.mainf__ttl
 			padding: 49px 0 15px 0
-			text-align: center
 			color: #000
-			+fs(40)
-			+hl
+			+ttl
 		.reliable__features
 			margin: 0 0 84px 0
 		.features__pic
 			margin-bottom: 25px
+			img
+				margin: 0 auto
 		.features__ttl
 			margin-bottom: 22px
-		.rapid
-			display: block
-			margin: 0 auto
-			+s(rapid)
-		.custom
-			display: block
-			margin: 0 auto
-			+s(custom)
-		.virtual
-			display: block
-			margin: 0 auto
-			+s(virtual)
 
 .overview
 	position: relative
@@ -641,10 +627,8 @@
 		+s(down)
 	.overview__ttl
 		padding: 30px 0
-		text-align: center
 		color: #BBBFC2
-		+fs(40)
-		+hl
+		+ttl
 	.overview__item
 		width: 246px
 		padding-left: 24px
@@ -663,3 +647,73 @@
 			color: #1992d5
 			&:hover
 				text-decoration: underline
+
+
+//domains1
+.domain
+	.domain__ttl
+		padding: 40px 0
+		color: #222222
+		+ttl
+	.domain__search
+		height: 56px
+		padding: 10px
+		background-color: #e0e6e9
+		border: 1px solid #ccd2d6
+		+border-radius(5px)
+		+g(#fff, #e0e6e9)
+		+box
+		+clr
+		.domain__span
+			display: block
+			width: 50px
+			margin: 4px 30px 0 0
+			text-transform: uppercase
+			color: #000
+			line-height: 14px
+			+fs(14)
+			+mpr
+			+text-shadow(1px 1px 0 rgba(255,255,255,.52))
+		.products__search
+			width: 718px
+			&:before
+				top: 7px
+				+s(zoom3)
+			&:after
+				width: 35px
+				height: 33px
+				top: 0
+		.search__input
+			height: 35px
+			padding: 0 109px 0 34px
+			background: url(../img/search3.png) repeat-x
+			background-color: #fff
+			+fs(15)
+		.custom__select
+			width: 15%
+			height: 35px
+			top: 0
+			&:after
+				top: 15px
+				right: 15px
+			select
+				height: 35px
+			span
+				padding: 2px 0 0 5px
+				line-height: 1.6
+				+fs(13)
+		.viewmore
+			width: 154px
+	.domain__tabs
+		position: relative
+		.viewmore
+			position: absolute
+			width: 154px
+			left: 50%
+			bottom: -17.5px
+			margin-left: -77px
+
+
+
+
+

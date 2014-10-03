@@ -82,6 +82,16 @@ body
 	.unlim__features
 		&:before
 			display: none
+	.checkbox
+		input
+			+opacity(1)
+	.checkbox__mode
+		&:before, &:after
+			display: none
+	.domain
+		.products__search
+			.search__input
+				padding-top: 7px
 
 a
 	text-decoration: none
@@ -114,7 +124,10 @@ a
 	font-family: "FontAwesome", Myriad Pro, Arial, sans-serif
 
 
-
+=ttl
+	text-align: center
+	+fs(40)
+	+hl
 
 
 
