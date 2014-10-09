@@ -649,12 +649,77 @@
 				text-decoration: underline
 
 
-//domains1
+//domains
 .domain
 	.domain__ttl
 		padding: 40px 0
 		color: #222222
 		+ttl
+	.domain__top
+		+clr
+	.top__tabs
+		position: relative
+		padding: 9px 23px 6px 20px
+		text-transform: uppercase
+		color: #babfc1
+		background-color: #ebf1f3
+		line-height: 1
+		+mpr
+		+fs(10)
+		+border-radius(5px 19px 0 0)
+		+box
+		&.is-active
+			color: #9da2a5
+			background-color: #dbe2e6
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			+arr(12, 26, #fff, tr)
+		i
+			display: inline-block
+			width: 11px
+			height: 11px
+			margin-left: 22px
+			background-color: #ccd2d6
+			cursor: pointer
+			vertical-align: bottom
+			+border-radius(50%)
+			&:after
+				content: ""
+				display: block
+				margin: 3px auto 0
+				+s(close)
+	.domain__colors
+		padding-bottom: 12px
+		span
+			margin-right: 20px
+			color: #c2c4c5
+			line-height: 1
+			+fs(11)
+			+mpi
+			&.premium
+				margin-right: 28px
+				i
+					background-color: #ff9100
+					+g(#ffb300, #ff9100)
+			&.free
+				i
+					+g(#97cf00, #77a900)
+			&.selected
+				i
+					+g(#23b7eb, #095fb5)
+			&.taken
+				margin-right: 0
+				i
+					+g(#cfd7db, #bdc3c7)
+			i
+				display: inline-block
+				width: 8px
+				height: 8px
+				margin-right: 8px
+				+border-radius(2px)
 	.domain__search
 		height: 56px
 		padding: 10px
@@ -664,6 +729,74 @@
 		+g(#fff, #e0e6e9)
 		+box
 		+clr
+		&.border-change
+			height: 91px
+			border-top-color: #dbe2e6
+			+border-radius(0 5px 0 0)
+		.com
+			width: 71px
+			height: 70px
+			margin-left: 10px
+			text-align: center
+			background: url(../img/com_strip.png) no-repeat
+			+box-shadow(1px 1px 0 rgba(255,255,255,.49))
+			+border-radius(3px)
+			p
+				margin: 10px 0 8px 0
+				text-transform: uppercase
+				color: #b45d00
+				line-height: 1
+				+fs(14)
+				+mpsb
+				+text-shadow(1px 1px 0 rgba(255,255,255,.31))
+			span
+				display: block
+				color: #FFF
+				font-family: Arial, sans-serif
+				line-height: 1
+				+fs(11)
+			.checkbox
+				width: 100%
+				height: 100%
+				input
+					top: 2px
+					left: -7px
+			.checkbox__mode
+				&:before
+					border: 0
+					top: 6px
+					left: 50%
+					margin-left: -7.5px
+				&:after
+					top: 11px
+					left: 50%
+					margin-left: -3px
+			&:first-child
+				margin-left: 0
+			&.premium
+				background-color: #ff9100
+			&.free
+				background-color: #97CF00
+				p
+					color: #487A01
+			&.taken
+				background: none
+				background-color: #D1DADD
+				p, span
+					color: #6E7273
+				.taken
+					margin-top: 8px
+					text-transform: none
+					+mpi
+					+fs(11)
+			&.selected
+				+g(#23b7eb, #095fb5)
+				background-color: #0e70c0
+				p
+					color: #FFF
+					+text-shadow(-1px -1px 0 rgba(0,0,0,.15))
+		&.border-change-another
+			+border-radius(0 0 5px 5px)
 		.domain__span
 			display: block
 			width: 50px

@@ -63,13 +63,17 @@
 
 .header__middle
 	min-height: 527px
-	background: url(../img/head_bg.png) 50% 0 no-repeat
+	background: url(../img/head_bg.jpg) no-repeat
 	-webkit-background-size: cover
 	-o-background-size: cover
 	background-size: cover
-	background-color: #0f0e16
+	+cover
 	&.inside
 		min-height: 156px
+		background: url(../img/head_bg-in.jpg) 10% 30% no-repeat
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
 	.header__bl
 		&.withpad
 			padding-top: 12px
@@ -592,6 +596,9 @@
 		+mpi
 	.chat
 		margin-top: 15px
+
+.footer
+	min-width: 984px
 
 .footer__nav
 	height: 200px
