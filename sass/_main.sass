@@ -82,63 +82,63 @@
 		+clr
 		&.inside
 			padding-top: 50px
-		.logo__in
+	.logo__in
+		display: block
+		font-size: 0
+	.logo__sym
+		display: inline-block
+		vertical-align: middle
+		padding-right: 15px
+		+s(logo)
+	.logo__txt
+		position: relative
+		vertical-align: middle
+		margin-right: 15px
+		color: #FFF
+		+mpsb
+		+fs(40)
+		&:after
+			content: "\2013"
+			position: absolute
+			top: -23px
+			right: 41px
+			+fs(38)
+	.logo__sup
+		display: inline-block
+		text-transform: uppercase
+		color: #AAA
+		line-height: 10px
+		+mpsb
+		+fs(10)
+		span
 			display: block
-			font-size: 0
-		.logo__sym
-			display: inline-block
-			vertical-align: middle
-			padding-right: 15px
-			+s(logo)
-		.logo__txt
-			position: relative
-			vertical-align: middle
-			margin-right: 15px
-			color: #FFF
-			+mpsb
-			+fs(40)
-			&:after
-				content: "\2013"
-				position: absolute
-				top: -23px
-				right: 41px
-				+fs(38)
-		.logo__sup
-			display: inline-block
-			text-transform: uppercase
-			color: #AAA
-			line-height: 10px
-			+mpsb
-			+fs(10)
-			span
-				display: block
-		.phone__num, .phone
-			display: inline-block
-		.phone__num
-			vertical-align: baseline
-			+s(phone)
-		.phone
-			padding-left: 20px
-			text-align: right
-			color: #FFF
-			line-height: 1.1
-			+fs(20)
-			+mpr
-		.phone__link
-			display: block
-			color: #1991D5
-			+fs(12)
-			+mpr
-			&:hover
-				text-decoration: underline
-		.or
-			display: block
-			padding: 8px 20px 0
-			color: #aaa
-			+fs(13)
-			+mpi
-		.chat
-			margin-top: 2px
+	.phone__num, .phone
+		display: inline-block
+	.phone__num
+		vertical-align: baseline
+		+s(phone)
+	.phone
+		padding-left: 20px
+		text-align: right
+		color: #FFF
+		line-height: 1.1
+		+fs(20)
+		+mpr
+	.phone__link
+		display: block
+		color: #1991D5
+		+fs(12)
+		+mpr
+		&:hover
+			text-decoration: underline
+	.or
+		display: block
+		padding: 8px 20px 0
+		color: #aaa
+		+fs(13)
+		+mpi
+	.chat
+		margin-top: 2px
 	.header__in-bottom
 		padding-top: 100px
 		+clr

@@ -4,4 +4,5 @@ head.load("js/lib/jquery.js",
 					"js/lib/jquery-ui.min.js",
 					"js/lib/jScrollPane.min.js",
 					"js/lib/jquery.mousewheel.js",
+					"js/lib/placeholder.js",
 					"js/common.js");

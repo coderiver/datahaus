@@ -4,7 +4,7 @@
 	background-color: #fff
 	+box-shadow(inset 0 68px 15px -11px rgba(248, 248, 249, 0.35))
 	&.another
-		min-height: 1200px
+		min-height: 870px
 
 .reasons__in
 	@extend %in
@@ -28,7 +28,12 @@
 		+mpi
 	.back
 		margin-top: 20px
-
+	&.contacts
+		.reasons__p
+			width: 88%
+			margin-right: 0
+			padding-left: 85px
+			+box
 .sidebar
 	position: absolute
 	width: 228px
@@ -249,7 +254,9 @@
 				margin-bottom: 35px
 
 .carousel
+	height: 136px
 	margin: 50px 0
+	overflow: hidden
 	.points__item
 		margin-bottom: 20px
 	.carousel__controls
@@ -706,13 +713,16 @@
 					+g(#ffb300, #ff9100)
 			&.free
 				i
+					background-color: #77a900
 					+g(#97cf00, #77a900)
 			&.selected
 				i
+					background-color: #095fb5
 					+g(#23b7eb, #095fb5)
 			&.taken
 				margin-right: 0
 				i
+					background-color: #bdc3c7
 					+g(#cfd7db, #bdc3c7)
 			i
 				display: inline-block
@@ -847,6 +857,150 @@
 			margin-left: -77px
 
 
-
-
-
+//contacts
+.mail
+	position: relative
+	width: 732px
+	&:before
+		content: ""
+		position: absolute
+		top: -15px
+		left: 50%
+		margin-left: -16.5px
+		z-index: 3
+		+s(points)
+	.mail__in
+		position: relative
+		margin: 0 15px
+		padding: 42px 20px 120px
+		border: 1px solid #e1e4e7
+		background-color: #fbfbfb
+		z-index: 2
+		&:before
+			content: ""
+			position: absolute
+			top: -1px
+			right: -1px
+			+arr(29, 30, #fff, tr)
+		&:after
+			content: ""
+			position: absolute
+			top: -1px
+			right: 0
+			+s(mail_corner)
+	.custom__select
+		position: relative
+		width: 100%
+		height: 35px
+		top: 0
+		background: #FFF
+		border: 1px solid #dddfe1
+		+border-radius(5px)
+		+box
+		+box-shadow(inset 1px 1px 9px rgba(0,0,0,.08))
+		&:before
+			content: ""
+			position: absolute
+			display: block
+			top: 0
+			right: 0
+			width: 33px
+			height: 32px
+			border: 1px solid #d7dcdf
+			border-right-width: 0
+			background-color: #e6e9eb
+			z-index: 0
+			+border-radius(0 5px 5px 0)
+			+g(#fff, #e6e9eb)
+		&:after
+			top: 15px
+			right: 13px
+		.s
+			width: 100%
+			height: 34px
+		span
+			margin: 9px 0 0 9px
+			padding: 0
+			color: #B6B6B7
+			border-left-width: 0
+			+fs(14)
+			+mpi
+	.input__row
+		margin: 22px 0
+		+clr
+		input
+			width: 320px
+			height: 35px
+			padding-left: 14px
+			color: #B6B6B7
+			background: #FFF
+			border: 1px solid #dddfe1
+			+mpi
+			+fs(14)
+			+border-radius(5px)
+			+box
+			+box-shadow(inset 1px 1px 9px rgba(0,0,0,.08))
+			+placeholder-color(#B6B6B7)
+			&:focus
+				border: 2px solid #c3e0f7
+				padding-left: 13px
+	.viewmore
+		display: block
+		width: 205px
+		margin: 25px auto 0
+	.mail__envelope
+		position: absolute
+		width: 732px
+		height: 332px
+		bottom: -116px
+		padding-top: 172px
+		background: url(../img/mail_envelope.png) no-repeat
+		z-index: 2
+		+box
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			width: 841px
+			height: 89px
+			bottom: -70px
+			left: -48px
+			background: url(../img/mail_shadow.png) no-repeat
+	.mail__address
+		width: 228px
+		margin: 0 auto
+		text-align: center
+		line-height: 1
+		+fs(13)
+		+mpr
+		p
+			color: #888
+		.call
+			margin: 14px 0 16px 0
+			color: #000
+			+fs(18)
+			+mpr
+		a
+			display: inline-block
+			margin-top: 11px
+			color: #1992D5
+			text-decoration: none
+			border-bottom: 1px dashed #1992d5
+			+fs(11)
+			&:hover
+				border-bottom: 0
+	.phone__num
+		display: block
+		margin: 0 auto
+		+s(phone)
+	.corner
+		position: absolute
+		display: block
+		bottom: 205px
+		z-index: 1
+		&.corner-left
+			left: 0
+			+s(corner-l)
+		&.corner-right
+			right: 0
+			+s(corner-r)

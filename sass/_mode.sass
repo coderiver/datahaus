@@ -260,6 +260,14 @@
 	+s(down)
 
 //slider & carousel
+.slider__bottom
+	.cycle-slideshow
+		min-height: 444px
+		&:first-child
+			display: block
+		.products__item
+			display: none
+
 .cycle__prev, .carousel__prev
 	display: inline-block
 	padding-right: 8px
@@ -458,3 +466,22 @@
 		left: 5px
 		z-index: 2
 		+s(checkbox_checked)
+
+//textarea
+.textarea
+	width: 100%
+	height: 125px
+	padding: 8px 0 0 14px
+	color: #B6B6B7
+	background: #FFF
+	border: 1px solid #dddfe1
+	resize: none
+	+fs(14)
+	+border-radius(5px)
+	+box
+	+box-shadow(inset 1px 1px 9px rgba(0,0,0,.08))
+	+placeholder-color(#B6B6B7)
+	+mpi
+	&:focus
+		border: 2px solid #c3e0f7
+		padding: 7px 0 0 13px

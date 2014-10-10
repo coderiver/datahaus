@@ -1,0 +1,35 @@
+.eq-ie8
+	.header__middle
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/head_bg.jpg', sizingMethod='scale', alpha(opacity = 100))
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/head_bg.jpg', sizingMethod='scale')"
+		&.inside
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/head_bg-in.jpg', sizingMethod='scale', alpha(opacity = 100))
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/head_bg-in.jpg', sizingMethod='scale')"
+	.search__input
+		padding-top: 5px
+		&.another
+			padding: 5px 75px 0 30px
+	.unlim__features
+		&:before
+			display: none
+	.checkbox
+		input
+			+opacity(1)
+	.checkbox__mode
+		&:before, &:after
+			display: none
+	.domain
+		.products__search
+			.search__input
+				padding-top: 7px
+		.domain__search
+			.com
+				.checkbox
+					input
+						top: 70%
+						left: 50%
+						margin-left: -6.5px
+	.mail
+		.input__row
+			input
+				padding-top: 8px

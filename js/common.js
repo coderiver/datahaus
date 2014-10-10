@@ -81,6 +81,7 @@ head.ready(function() {
 		tabContent.eq(activeTabIndex).show();
 		return false;
 	});
+
 	//tabs scroller
 	$('.tabs__wrap').jScrollPane({
 		verticalDragMaxHeight: 47,
