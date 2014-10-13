@@ -276,6 +276,17 @@
 	display: inline-block
 	+s(next)
 
+.carousel
+	height: 136px
+	margin: 50px 0
+	overflow: hidden
+	.points__item
+		margin-bottom: 20px
+	.carousel__controls
+		margin: 8px 12px 0 0
+	.cycle-slideshow
+		max-height: 92px
+
 //jScrollPane styles
 .features__table
 	overflow-y: scroll
@@ -457,7 +468,6 @@
 		background: #fff
 		+border-radius(2px)
 		+box-shadow(inset 1px 1px 7px rgba(0,0,0,.12))
-
 	&:after
 		content: ""
 		display: none
@@ -485,3 +495,66 @@
 	&:focus
 		border: 2px solid #c3e0f7
 		padding: 7px 0 0 13px
+
+//spinner
+.spinner
+	position: relative
+	margin: 10px 0
+	input
+		@extend .search__input.another
+		width: 180px
+		padding: 0
+		text-align: center
+		+border-radius(5px)
+	.inputb
+		position: absolute
+		width: 25px
+		height: 23px
+		border: 1px solid #d7dcdf
+		background-color: #e6e9eb
+		+g(#fff, #e6e9eb)
+		&.left
+			top: 0
+			left: 0
+			+border-radius(5px 0 0 5px)
+			&:before
+				content: ""
+				position: absolute
+				display: block
+				top: 8px
+				left: 10px
+				+s(arr_black-l)
+			&.inactive
+				border-color: #BFC0C2
+				&:before
+					+s(arr_grey-l)
+		&.right
+			top: 0
+			right: 0
+			+border-radius(0 5px 5px 0)
+			&:before
+				content: ""
+				position: absolute
+				display: block
+				top: 8px
+				right: 9px
+				+s(arr_black-r)
+			&.inactive
+				border-color: #BFC0C2
+				&:before
+					+s(arr_grey-r)
+
+.range-big
+	&.ui-slider-horizontal .ui-slider-handle
+		top: -30px
+		margin-left: -22px
+	&.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br
+		height: 13px
+		background: url(../img/range_bg-big.png) repeat-x
+	&.ui-slider-horizontal .ui-slider-range-min
+		height: 13px
+		background: url(../img/range_bg-h-big.png) repeat-x
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+		width: 44px !important
+		height: 30px !important
+		background: url("../img/range_slide-big.png") 50% 50% repeat-x !important

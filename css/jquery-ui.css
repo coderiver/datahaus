@@ -119,8 +119,9 @@
 }
 .ui-slider-horizontal .ui-slider-handle {
 	top: 10px;
-	margin-left: -11px;
+	margin-left: -17px;
 }
+
 .ui-slider-horizontal .ui-slider-range {
 	top: 0;
 	height: 100%;
@@ -196,10 +197,11 @@
 	/*border: 1px solid #cccccc;*/
 	width: 34px;
 	height: 24px;
-	background: url("../img/range_slide.png") 50% 50% repeat-x;
+	background: url("../img/range_slide.png") 50% 50% no-repeat;
 	/*font-weight: bold;
 	color: #1c94c4;*/
 }
+
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {

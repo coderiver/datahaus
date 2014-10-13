@@ -1,9 +1,17 @@
 head.ready(function() {
 
 	//main page range
-	$(".slider").slider({
+	$(".range").slider({
 		range: "min",
-		step: 6.730752
+		value: 40.38,
+		step: 6.73
+	});
+
+	//vps page range
+	$(".range-big").slider({
+		range: "min",
+		value: 16.2,
+		step: 2.7
 	});
 
 	//main page language list

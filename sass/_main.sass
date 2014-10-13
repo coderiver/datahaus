@@ -63,16 +63,11 @@
 
 .header__middle
 	min-height: 527px
-	background: url(../img/head_bg.jpg) no-repeat
-	-webkit-background-size: cover
-	-o-background-size: cover
+	background: url(../img/head_bg.jpg) 50% 10% no-repeat
 	background-size: cover
-	+cover
 	&.inside
 		min-height: 156px
 		background: url(../img/head_bg-in.jpg) 10% 30% no-repeat
-		-webkit-background-size: cover
-		-o-background-size: cover
 		background-size: cover
 	.header__bl
 		&.withpad
@@ -483,7 +478,8 @@
 				top: 3.5px
 				left: 0
 				+s(checked)
-	.slider
+	.range
+		width: 208px
 		margin-top: 10px
 
 .reliable
@@ -491,8 +487,6 @@
 	min-height: 492px
 	border-top: 1px solid #e8e8e8
 	background: url(../img/map.png) 50% 30% no-repeat
-	-webkit-background-size: cover
-	-o-background-size: cover
 	background-size: cover
 	+box-shadow(inset 0 70px 15px -10px rgba(248, 248, 249, 0.35))
 	&:before
@@ -562,7 +556,6 @@
 			+box-shadow(0 2px 3px rgba(0,0,0,.14))
 			+text-shadow(-1px -1px 0 #cf8600)
 			+g(#ffb300, #ff9100)
-
 
 //footer
 .specialist
@@ -683,6 +676,3 @@
 			.rss
 				padding-right: 0
 				+s(rss)
-
-
-
